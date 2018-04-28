@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parallax {
+  /* Defining the height and perspective style properties 
+  of an element will lock the perspective to its centre, 
+  creating a fixed origin 3D viewport */
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallaxGroup {
+  position: relative;
+  height: 100vh; /* 100% la altura de la pantalla */
+  transform-style: preserve-3d; /*Prevents the browser flattening the parallax__layer elements */
+}
+
+.parallaxLayer {
+  /* Configured to fill the space of the container */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallaxLayer_foreground {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+#group2 .parallaxLayer_foreground {
+  background: #edeeef;
+}
+
+.parallaxLayer_background {
+  background-image: url('./Images/coverImg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-transform: translateZ(-1px) scale(2.015); /* The scale factor can be calculated with 1 + (translateZ * -1) / perspective */
+  transform: translateZ(-1px) scale(2.015);
+}
+
+.title {
+  position: absolute;
+
+  /* Porcentage calculado en relacion a la capa */
+  left: 50%;
+  top: 75%;
+  
+  /* Porcentage calculado en relacion al ancho y alto del texto */
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Centra el texto en la capa */
+}
+
+#pageHeaderName {
+  color: white;
+  font-size: 4vw;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.container {
+  font-family: 'Playfair Display', serif;
+}
+
+#sectionName:before, #sectionName:after {
+  background-color: #1a1a1a;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 30%;
+}
+#sectionName:before {
+  right: 0.25em;
+  margin-left: -50%;
+}
+#sectionName:after {
+  left: 0.25em;
+  margin-right: -50%;
+}
+
+.section {
+  padding-top: 80px;
+  /* padding-bottom: 80px; */
+  width: 100%;
+}
+
+.sectionTitle {
+  margin-bottom: 20px;
+}
+
+/* Handling slide-in */
+.come-in {
+  transform: translateY(100px);
+  animation: come-in 2s ease forwards;
+}
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+/* .already-visible {
+  transform: translateY(0);
+  animation: none;
+} */

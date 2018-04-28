@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ParallaxEffect CSS</title>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./stylesCSS.css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <div class="parallax">
+
+    <div class="parallaxGroup">
+
+      <div class="parallaxLayer parallaxLayer_foreground">
+        <div class="title">
+          <h6 id="pageHeaderName">CÉSAR GUTIÉRREZ</h6>
+        </div>
+      </div>
+
+      <div class="parallaxLayer parallaxLayer_background"></div>
+
+    </div>
+
+    <div id="group2">
+
+      <div class="parallaxLayer parallaxLayer_foreground" style="position: relative; height: auto;">
+
+        <div class="container-fluid">
+
+          <section id="section1" class="section">
+            <div class="container">
+              <div class="row justify-content-center sectionTitle">
+                <h1 id="sectionName">Section title</h1>
+              </div>
+              <div class="row sectionContent">
+                <div class="col-md-6">
+                  <img src="./Images/NTNU.jpg" style="width: 100%; height: auto;">
+                </div>
+                <div class="col-md-6">
+                  <h5>NTNU</h5>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="section2" class="section">
+            <div class="container">
+              <div class="row justify-content-center sectionTitle">
+                <h1 id="sectionName">Section title</h1>
+              </div>
+              <div class="row sectionContent">
+                <div class="col-md-6">
+                  <img src="./Images/NTNU.jpg" style="width: 100%; height: auto;">
+                </div>
+                <div class="col-md-6">
+                  <h5>NTNU</h5>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="section3" class="section">
+            <div class="container">
+              <div class="row justify-content-center sectionTitle">
+                <h1 id="sectionName">Section title</h1>
+              </div>
+              <div class="row sectionContent">
+                <div class="col-md-6">
+                  <img src="./Images/NTNU.jpg" style="width: 100%; height: auto;">
+                </div>
+                <div class="col-md-6">
+                  <h5>NTNU</h5>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <p style="margin: 0;">Hola</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    /* A small plugin that checks whether elements are within
+     * the user visible viewport of a web browser.
+     * Only accounts for vertical position, not horizontal.
+     */
+    $.fn.visible = function (partial) {
+
+      var viewTop = $(window).scrollTop();
+      var viewBottom = viewTop + $(window).height();
+      var _top = $(this).offset().top;
+      var _bottom = _top + $(this).height();
+
+      var compareTop = partial === true ? _bottom : _top;
+      var compareBottom = partial === true ? _top : _bottom;
+
+      return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+    };
+
+    
+
+    $(document).ready(
+
+      $(".parallax").animate({ scrollTop: 70 }, 1500),
+
+      $(".parallax").scroll(() => {
+
+        var sections = $('.section');
+
+        $.each(sections, function (i, section) {
+
+          if ($(section).visible(true)) {
+            $(section).addClass("come-in");
+          }
+
+        });
+      })
+
+      // // Already visible modules
+      // $('.section').each( function (i, element) {
+
+      //   if ($(element).visible(true)) {
+      //     $(element).addClass("already-visible");
+      //   }
+
+      // });
+    );
+
+  </script>
+
+</body>
+
+</html>
