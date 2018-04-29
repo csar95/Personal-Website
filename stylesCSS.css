@@ -39,12 +39,19 @@
 }
 
 .parallaxLayer_background {
-  background-image: url('./Images/coverImg.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: 
+    /* top to bottom */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.1)
+    ),
+    url('./Images/coverImg.jpg'),
+    center,
+    no-repeat;
   background-size: cover;
 
-  -webkit-transform: translateZ(-1px) scale(2.015); /* The scale factor can be calculated with 1 + (translateZ * -1) / perspective */
+  /* The scale factor can be calculated with 1 + (translateZ * -1) / perspective */
+  -webkit-transform: translateZ(-1px) scale(2.015);
   transform: translateZ(-1px) scale(2.015);
 }
 
