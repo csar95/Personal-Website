@@ -41,7 +41,9 @@
 }
 
 #group2 .parallaxLayer_foreground {
-  background: #f3f3f3;
+  /* background: #f3f3f3; */
+  background: #eeeeee;
+  color: #333333;
 }
 
 .parallaxLayer_background {
@@ -80,13 +82,24 @@
   /* font-family: 'Passion One', cursive; */
   text-align: center;
 }
+#subtitle {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 2vw;
+  text-align: right;
+}
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .parallaxLayer_background {
     background-position: center;
   }
   #pageHeaderName {
     font-size: 36px;
+    text-align: right;
+  }
+  #subtitle {
+    font-size: 18px;
   }
 }
 
@@ -119,7 +132,7 @@
   margin-right: -50%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   #sectionName {
     font-size: 32px;
   }
@@ -136,6 +149,12 @@
   }
 }
 
+@media screen and (max-width: 358px) {
+  #sectionName {
+    font-size: 28px;
+  }
+}
+
 .section {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -144,16 +163,41 @@
 
 .sectionContent {
   padding: 20px 0 20px 0;
+  justify-content: start;
 }
-
-h5 {
-  /* font-family: 'Passion One', cursive; */
-  font-weight: bold;
+.sectionContent .company {
+  margin: 0;  
+  font-family: 'Brandon bold'; /* font-family: 'Passion One', cursive; */
+  font-size: 24px;
+  color: royalblue;
   text-align: left;
+}
+.sectionContent .time {
+  padding: 0;
+  margin: 13px 0 8px 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: green;
+}
+.sectionContent .place {
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .sectionContent {
+    justify-content: center;
+  }
+  .sectionContent .company {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .sectionContent .time {
+    font-size: 1rem;
+  }
 }
 
 .contentImg {
-  border-radius: 40px;
+  border-radius: 30px;
   /* filter: gray; IE5+
   -webkit-filter: grayscale(1); Webkit Nightlies & Chrome Canary
   transition: all .1s ease; */
