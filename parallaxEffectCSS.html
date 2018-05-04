@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <title>Bienvenido</title>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>  
+  <script src="js/jquery.cycle2.min.js"></script>
 
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
@@ -48,7 +49,7 @@
             <div class="row sectionTitle">
               <div class="col-md-6 offset-md-3">
                 <h1 id="sectionName">Experiencia Profesional</h1>
-              </div>              
+              </div>
             </div>
             <div class="row sectionContent">
               <div class="col-lg-4 offset-lg-1 col-md-5 col-sm-11 col-11">
@@ -81,7 +82,8 @@
           </div>
         </section>
 
-        <section id="section2" class="section" style="background-color: #ffffff"> <!-- #dddddd"> -->
+        <section id="section2" class="section" style="background-color: #ffffff">
+          <!-- #dddddd"> -->
           <div class="container">
             <div class="row sectionTitle">
               <div class="col-md-6 offset-md-3">
@@ -119,18 +121,54 @@
           </div>
         </section>
 
+        <section id="section3" class="section">
+          <div class="container">
+            <div class="row sectionTitle">
+              <div class="col-md-6 offset-md-3">
+                <h1 id="sectionName">Más sobre mí</h1>
+              </div>
+            </div>
+          </div>
+          <!-- SLIDER -->
+          <div class="sectionContent">
+            <div class="cycle-slideshow"
+              data-cycle-center-horz=true
+              data-cycle-center-vert=true>
+              <!-- data-cycle-pager-template="<a class='thumb' href='#'><img src='{{src}}'></a>"> -->
+            
+              <!-- <span class="cycle-pager"></span> -->
+              <span class="cycle-prev">&#9001;</span>
+              <span class="cycle-next">&#9002;</span>
+            
+              <img class="sliderImg" src="Images/skogafoss.jpg">
+              <img class="sliderImg" src="Images/iceland.jpg">
+              <img class="sliderImg" src="Images/NTNU.jpg">
+              <img class="sliderImg" src="Images/skogafoss.jpg">
+              <img class="sliderImg" src="Images/iceland.jpg">
+              <img class="sliderImg" src="Images/NTNU.jpg">
+            </div>
+          </div>         
+
+        </section>
+
         <footer style="background-color: #26262a">
           <div class="container">
             <div class="row">
               <div class="col-lg-12 offset-lg-0 col-sm-10 offset-sm-1">
 
-                <hr style="background-color: white;">            
+                <hr style="background-color: white;">
                 <span style="text-align: left;">
                   2018 · Madrid
                   <span style="float: right;">
-                    <a target="_blank" href="https://es.linkedin.com/in/c%C3%A9sar-guti%C3%A9rrez-carrero-341bb5141" style="vertical-align: text-bottom;"><i class="fab fa-linkedin-in"></i></a>
-                    <a target="_blank" href="https://www.youtube.com/user/cesarguti95"><i class="fab fa-youtube"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/csar95/"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://es.linkedin.com/in/c%C3%A9sar-guti%C3%A9rrez-carrero-341bb5141" style="vertical-align: text-bottom;">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/user/cesarguti95">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/csar95/">
+                      <i class="fab fa-instagram"></i>
+                    </a>
                   </span>
                 </span>
 
