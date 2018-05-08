@@ -201,9 +201,12 @@
 
 /* ------- SLIDER ------- */
 .cycle-slideshow {
-  width: 100%;
-  display: block;
   position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  background-color: #252525;
+  overflow: hidden;
 }
 /* .cycle-prev, .cycle-next {
   width: 50px;
@@ -247,8 +250,8 @@
   display: block;
 } */
 .sliderImg {
-  width: 100%;
-  display: block;
+  max-height: 80vh;
+  max-width: 100%;
 }
 /* ------- SLIDER ------- */
 
