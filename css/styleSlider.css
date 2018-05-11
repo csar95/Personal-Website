@@ -1,0 +1,113 @@
+#slideshow-1 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    background-color: #26262a;
+    overflow: hidden;
+}
+#slideshow-2 {
+    background: transparent;
+    overflow: hidden;
+    position: absolute !important;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 300;
+    /* Slide-up animation */
+    opacity: 0;
+    transform: translateY(120px);
+    padding-top: 120px;
+    transition: opacity 0.5s, transform 0.5s, padding-top 0.5s;
+}
+
+
+.cycle-carousel-wrap {
+    width: 100%;
+    top: auto !important;
+    bottom: 0 !important;
+}
+#slideshow-2 a {
+    display: inline-block;
+    margin: 10px 5px !important;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.cycle-slide {
+    opacity: .5;
+}
+.cycle-slide-active {
+    opacity: 1 !important;
+}
+#slideshow-2 .thumb {
+    width: 14%;
+    height: 8vw;
+    max-height: 100px;
+    max-width: 174px;
+    overflow: hidden;
+}
+#slideshow-2 .thumb img {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+.thumb {
+    z-index: 300 !important;
+}
+@media screen and (max-width: 768px) {
+    #slideshow-2 a {
+        margin: 0 0.4vw !important;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+}
+
+
+.cycle-prev, .cycle-next {
+    position: absolute;
+    display: block;
+    top: 0;
+    z-index: 200;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-weight: 100;
+}
+.cycle-prev {
+    left: 0;
+}
+.cycle-next {
+    right: 0;
+}
+.cycle-prev span, .cycle-next span {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+    .cycle-prev, .cycle-next {
+        font-size: 5vw;
+    }
+    .cycle-prev span, .cycle-next span {
+      top: 43%;
+    }
+}
+.cycle-prev span {
+    left: 40%;
+}
+.cycle-next span {
+    right: 40%;
+}
+
+
+.sliderImg {
+    max-height: 85vh;
+    max-width: 100%;
+}

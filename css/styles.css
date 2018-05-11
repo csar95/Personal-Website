@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Brandon bold';
+  font-weight: bold;
+  src: url("../fonts/BrandonText-Bold.otf") format("opentype");
+}
+
+.container {
+  /* font-family: 'Gentium Basic', serif; */
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+}
+
+#sectionName {
+  /* font-family: 'Passion One', cursive; */
+  font-family: 'Brandon bold';
+  text-align: center;
+}
+#sectionName:before, #sectionName:after {
+  background-color: #1a1a1a;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 80px;
+}
+#sectionName:before {
+  right: 0.25em;
+  margin-left: -50%;
+}
+#sectionName:after {
+  left: 0.25em;
+  margin-right: -50%;
+}
+
+@media screen and (max-width: 768px) {
+  #sectionName {
+    font-size: 32px;
+  }
+  #sectionName:before {
+    content: none;
+  }
+  #sectionName:after {
+    display: block;
+    left: 0;
+    margin: 15px auto;
+    position: relative;
+    top: 0;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 358px) {
+  #sectionName {
+    font-size: 28px;
+  }
+}
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 100%;
+}
+
+.sectionContent {
+  padding: 20px 0 20px 0;
+  justify-content: start;
+}
+.sectionContent .company {
+  margin: 0;  
+  font-family: 'Brandon bold'; /* font-family: 'Passion One', cursive; */
+  font-size: 24px;
+  color: royalblue;
+  text-align: left;
+}
+.sectionContent .time {
+  padding: 0;
+  margin: 13px 0 8px 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: green;
+}
+.sectionContent .place {
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .sectionContent {
+    justify-content: center;
+  }
+  .sectionContent .company {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .sectionContent .time {
+    font-size: 1rem;
+  }
+}
+.contentImg {
+  border-radius: 30px;
+}
+
+/* Handling slide-in */
+.come-in {
+  animation: come-in 1s ease forwards;
+}
+@keyframes come-in {
+  from { transform: translateY(40px);
+         opacity: 0; }
+  to { transform: translateY(0); 
+       opacity: 1; }
+}
+/* .already-visible {
+  transform: translateY(0);
+  animation: none;
+} */
+
+footer {
+  color: #26262a;
+  padding: 25px 0 25px 0;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+}
+footer a {
+  color: #26262a;
+  margin-left: 30px;
+}
+footer a:hover {
+  color: #9e9e9e;
+}
