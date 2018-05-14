@@ -37,12 +37,12 @@
   
 .parallaxLayer_background {
     background: 
-        /* top to bottom */ 
         linear-gradient(
             rgba(0, 0, 0, 0.3), 
             rgba(0, 0, 0, 0.1)
         ),
-        url('/coverImg5.jpg'),
+        url(/images/coverImg5.jpg),
+        /* url({{content.fields.cover.fields.backgroundImage.fields.file.url}}), */
         center,
         no-repeat;
     background-size: cover;

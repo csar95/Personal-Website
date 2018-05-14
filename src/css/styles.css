@@ -6,7 +6,7 @@
 @font-face {
   font-family: 'Brandon bold';
   font-weight: bold;
-  src: url("/BrandonText-Bold.otf") format("opentype");
+  src: url("/fonts/BrandonText-Bold.otf") format("opentype");
 }
 
 .container {
