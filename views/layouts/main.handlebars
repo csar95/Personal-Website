@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienvenido</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="/jquery.cycle2.js"></script>
+    <script src="/jquery.cycle2.carousel.js"></script>
+    <script src="/jquery.cycle2.center.min.js"></script>
+    <script src="/jquery.cycle2.swipe.min.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styleSlider.css">
+    <link rel="stylesheet" href="/styleParallaxEffect.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Basic|Passion+One|Fira+Sans:100,300" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- MARKED JS -->
+    <script src="/angular.js"></script>
+    <script src="/marked.js"></script>
+    <script src="/angular-marked.js"></script>
+    <script src="/app.js"></script>
+    <!-- //MARKED JS -->
+</head>
+
+<body>
+    
+    {{{body}}}
+
+    <script>
+            
+        /* A small plugin that checks whether elements are within
+        * the user visible viewport of a web browser.
+        * Only accounts for vertical position, not horizontal.
+        */
+        $.fn.visible = function (partial) {
+
+            var viewTop = $(window).scrollTop();
+            var viewBottom = viewTop + $(window).height();
+            var _top = $(this).offset().top;
+            var _bottom = _top + $(this).height();
+
+            var compareTop = partial === true ? _bottom : _top;
+            var compareBottom = partial === true ? _top : _bottom;
+
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+        };
+
+        jQuery(document).ready( function($) {
+
+            var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
+                // Advance the other slideshow
+                slideshows.not(this).cycle('goto', opts.currSlide);
+            });
+
+            $('#slideshow-2 .cycle-slide').click(function(){
+                var index = $('#slideshow-2').data('cycle.API').getSlideIndex(this);
+                slideshows.cycle('goto', index);
+            });
+
+        });
+
+        $(document).ready(
+
+            $(".parallax").animate({ scrollTop: 70 }, 1500),
+
+            $(".parallax").scroll(() => {
+
+                var contentRows = $('.sectionContent');
+
+                $.each(contentRows, function (i, contentRow) {
+
+                if ($(contentRow).visible(true)) {
+                    $(contentRow).addClass("come-in");
+                }
+
+                });
+            }),
+            
+            /* --------------------------------- SLIDE-UP ANIMATION --------------------------------- */
+            $( '.cycle-prev span, .cycle-next span' ).hover( 
+                // handlerIn
+                () => { $('#slideshow-2').mouseenter() },
+                // handlerOut
+                () => { $('#slideshow-2').mouseleave() }
+            ),
+
+            $('#slideshow-2').on( 'mouseenter', () => { 
+                $("#slideshow-2").css({'opacity': '1', 'transform': 'translateY(0)', 'padding-top': '20px'}) 
+            }),
+
+            $('#slideshow-2').on( 'mouseleave', () => { 
+                $("#slideshow-2").css({'opacity': '0', 'transform': 'translateY(120px)', 'padding-top': '120px'}) 
+            })
+        
+        );
+
+    </script>
+
+</body>
+
+</html>

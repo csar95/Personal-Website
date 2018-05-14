@@ -1,0 +1,148 @@
+<div class="parallax">
+
+    <div class="parallaxGroup">
+
+        <div class="parallaxLayer parallaxLayer_foreground">
+            <div class="title">
+                <h6 id="pageHeaderName">{{content.fields.cover.fields.coverTitle}}</h6>
+                <div id="subtitle">{{content.fields.cover.fields.coverSubtitle}}</div>
+            </div>
+        </div>
+
+        <div class="parallaxLayer parallaxLayer_background"></div>
+
+    </div>
+
+    <div id="group2">
+
+        <div class="parallaxLayer parallaxLayer_foreground" style="position: relative; height: auto;">
+
+            <section id="section1" class="section">
+                <div class="container">
+                    <div class="row sectionTitle">
+                        <div class="col-md-6 offset-md-3">
+                            <h1 id="sectionName">{{content.fields.sections.0.fields.sectionName}}</h1>
+                        </div>
+                    </div>
+
+                    {{#each content.fields.sections.0.fields.contentRows}}
+                    <div class="row sectionContent">
+                        <div class="col-lg-4 offset-lg-1 col-md-5 col-sm-11 col-11">
+                            <img class="contentImg" src={{this.fields.image.fields.file.url}} style="width: 100%; height: auto; background-color: #f8f8f8">
+                        </div>
+                        <div class="col-lg-6 col-md-7 col-sm-11 col-11">
+                            <h5 class="company">{{this.fields.title}}</h5>
+                            <h6 class="time">{{this.fields.subtitle}}</h6>
+                            <p class="place">{{this.fields.place}}</p>
+                            <p>{{this.fields.content}}</p>
+                        </div>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </section>
+
+            <section id="section2" class="section" style="background-color: #ffffff">
+                <div class="container">
+                    <div class="row sectionTitle">
+                        <div class="col-md-6 offset-md-3">
+                            <h1 id="sectionName">{{content.fields.sections.1.fields.sectionName}}</h1>
+                        </div>
+                    </div>
+
+                    {{#each content.fields.sections.1.fields.contentRows}}
+                    <div class="row sectionContent">
+                        <div class="col-lg-6 offset-lg-1 col-md-7 col-sm-10 col-10">
+                            <h5 class="studies">{{this.fields.title}}</h5>
+                            <h6 class="time">{{this.fields.subtitle}}</h6>
+                            <p class="place">{{this.fields.place}}</p>
+                            <p>{{this.fields.content}}</p>
+                        </div>
+                        <div class="col-lg-4 col-md-5 col-sm-10 col-10">
+                            <img src={{this.fields.image.fields.file.url}} style="width: 100%; height: auto;">
+                        </div>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </section>
+
+            <section id="section3" class="section">
+                <div class="container">
+                    <div class="row sectionTitle">
+                        <div class="col-md-6 offset-md-3">
+                            <h1 id="sectionName">{{content.fields.sections.2.fields.sectionName}}</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- SLIDER -->
+                <div class="sectionContent">
+                    <div id="slideshow-1" class="cycle-slideshow" 
+                        data-cycle-timeout=0
+                        data-cycle-center-horz=true
+                        data-cycle-allow-wrap=false
+                        data-cycle-swipe=true>
+
+                        <div class="cycle-prev"><span>&#9001;</span></div>
+                        <div class="cycle-next"><span>&#9002;</span></div>
+
+                        <!-- Thumbnails -->
+                        <div id="slideshow-2" class="cycle-slideshow"
+                            data-cycle-timeout="0"
+                            data-cycle-fx="carousel"
+                            data-cycle-allow-wrap=false
+                            data-cycle-slides="> a"
+                            data-cycle-swipe=true
+                            data-cycle-prev="> #slideshow-1 .cycle-prev"
+                            data-cycle-next="> #slideshow-1 .cycle-next">
+
+                            <a id="firstImage" class='thumb' href='#'><img src={{content.fields.sections.2.fields.contentRows.0.fields.gallery.0.fields.file.url}}></a>
+                            <a class='thumb' href='#'><img src={{content.fields.sections.2.fields.contentRows.0.fields.gallery.1.fields.file.url}}></a>
+                            <a class='thumb' href='#'><img src={{content.fields.sections.2.fields.contentRows.0.fields.gallery.2.fields.file.url}}></a>
+                            <a class='thumb' href='#'><img src={{content.fields.sections.2.fields.contentRows.0.fields.gallery.3.fields.file.url}}></a>
+                            <a id="lastImage" class='thumb' href='#'><img src={{content.fields.sections.2.fields.contentRows.0.fields.gallery.4.fields.file.url}}></a>
+                        </div>
+
+                        {{#each content.fields.sections.2.fields.contentRows.0.fields.gallery}}
+                            <img class="sliderImg" src={{this.fields.file.url}}>
+                        {{/each}}
+                    </div>
+                </div>
+
+            </section>
+
+            <footer>
+                <!-- style="background-color: white"> -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 offset-lg-0 col-sm-10 offset-sm-1">
+
+                            <hr style="background-color: #26262a;">
+                            <span style="text-align: left;">
+
+                                {{content.fields.footer.fields.footerText}}
+                                
+                                <span style="float: right;">
+                                    <a target="_blank" href="https://es.linkedin.com/in/c%C3%A9sar-guti%C3%A9rrez-carrero-341bb5141" style="vertical-align: text-bottom;">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a target="_blank" href="https://www.youtube.com/user/cesarguti95">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <a target="_blank" href="https://www.instagram.com/csar95/">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </span>
+                                
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+</div>

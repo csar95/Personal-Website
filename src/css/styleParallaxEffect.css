@@ -42,7 +42,7 @@
             rgba(0, 0, 0, 0.3), 
             rgba(0, 0, 0, 0.1)
         ),
-        url('../images/coverImg5.jpg'),
+        url('/coverImg5.jpg'),
         center,
         no-repeat;
     background-size: cover;

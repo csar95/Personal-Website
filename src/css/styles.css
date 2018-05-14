@@ -6,7 +6,7 @@
 @font-face {
   font-family: 'Brandon bold';
   font-weight: bold;
-  src: url("../fonts/BrandonText-Bold.otf") format("opentype");
+  src: url("/BrandonText-Bold.otf") format("opentype");
 }
 
 .container {
@@ -71,7 +71,7 @@
   padding: 20px 0 20px 0;
   justify-content: start;
 }
-.sectionContent .company {
+.sectionContent .company, .sectionContent .studies {
   margin: 0;  
   font-family: 'Brandon bold'; /* font-family: 'Passion One', cursive; */
   font-size: 24px;
@@ -95,6 +95,9 @@
   }
   .sectionContent .company {
     margin-top: 20px;
+    font-size: 22px;
+  }
+  .sectionContent .studies {
     font-size: 22px;
   }
   .sectionContent .time {
