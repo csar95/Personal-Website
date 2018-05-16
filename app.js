@@ -17,8 +17,6 @@ app.engine('handlebars', expHbs({
 }));
 app.set('view engine', 'handlebars');
 app.use( express.static( path.join(__dirname, 'src') ));
-// app.use( express.static( path.join(__dirname, 'images') ));
-// app.use( express.static( path.join(__dirname, 'fonts') ));
 app.set('port', (process.env.PORT || 5000));
 
 app.listen( app.get('port'), () => {

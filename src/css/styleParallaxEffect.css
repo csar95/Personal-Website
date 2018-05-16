@@ -3,7 +3,9 @@
     of an element will lock the perspective to its centre, 
     creating a fixed origin 3D viewport */
     -webkit-perspective: 1px;
-    perspective: 1px;
+       -moz-perspective: 1px;
+        -ms-perspective: 1px;
+            perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
@@ -12,7 +14,10 @@
 .parallaxGroup {
     position: relative;
     height: 100vh; /* 100% la altura de la pantalla */
-    transform-style: preserve-3d; /*Prevents the browser flattening the parallax__layer elements */
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d; /*Prevents the browser flattening the parallax__layer elements */
 }
   
 .parallaxLayer {
@@ -26,7 +31,9 @@
   
 .parallaxLayer_foreground {
     -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+       -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+            transform: translateZ(0);
 }
   
 #group2 .parallaxLayer_foreground {
@@ -42,14 +49,15 @@
             rgba(0, 0, 0, 0.1)
         ),
         url(/images/coverImg5.jpg),
-        /* url({{content.fields.cover.fields.backgroundImage.fields.file.url}}), */
         center,
         no-repeat;
     background-size: cover;
   
     /* The scale factor can be calculated with 1 + (translateZ * -1) / perspective */
     -webkit-transform: translateZ(-1px) scale(2.015);
-    transform: translateZ(-1px) scale(2.015);
+       -moz-transform: translateZ(-1px) scale(2.015);
+        -ms-transform: translateZ(-1px) scale(2.015);
+            transform: translateZ(-1px) scale(2.015);
 }
   
 .title {
@@ -61,7 +69,9 @@
     
     /* Porcentage calculado en relacion al ancho y alto del texto */
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); /* Centra el texto en la capa */
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* Centra el texto en la capa */
 }
   
 #pageHeaderName {

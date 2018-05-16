@@ -1,0 +1,139 @@
+/* IE10+ SPECIFIC STYLES */
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    .parallaxLayer {
+        /* Configured to fill the space of the container */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .parallaxLayer_foreground {
+        background: 
+            linear-gradient(
+                rgba(0, 0, 0, 0.3), 
+                rgba(0, 0, 0, 0.1)
+            ),
+            url(/images/coverImg5.jpg),
+            center,
+            no-repeat;
+        background-size: cover;
+    }
+    .parallaxLayer_background {
+        z-index: -1000;
+    }
+    
+    .title {
+        position: absolute;
+      
+        /* Porcentage calculado en relacion a la capa */
+        left: 50%;
+        top: 60%;
+        
+        /* Porcentage calculado en relacion al ancho y alto del texto */
+        -webkit-transform: translate(-50%, -50%);
+           -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); /* Centra el texto en la capa */
+    }
+
+    #pageHeaderName {
+        color: white;
+        font-size: 5vw;
+        font-family: 'Brandon bold';
+        text-align: center;
+    }
+    
+    #subtitle {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 2vw;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .parallaxLayer_foreground {
+        background-position: center;
+    }
+    #pageHeaderName {
+        font-size: 36px;
+        text-align: right;
+    }
+    #subtitle {
+        font-size: 18px;
+    }
+}
+
+/* MICROSOFT EDGE 12+ SPECIFIC STYLES */
+
+@supports (-ms-ime-align:auto) {
+    .parallaxLayer {
+        /* Configured to fill the space of the container */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .parallaxLayer_foreground {
+        background: 
+            linear-gradient(
+                rgba(0, 0, 0, 0.3), 
+                rgba(0, 0, 0, 0.1)
+            ),
+            url(/images/coverImg5.jpg),
+            center,
+            no-repeat;
+        background-size: cover;
+    }
+    .parallaxLayer_background {
+        z-index: -1000;
+    }
+    
+    .title {
+        position: absolute;
+      
+        /* Porcentage calculado en relacion a la capa */
+        left: 50%;
+        top: 60%;
+        
+        /* Porcentage calculado en relacion al ancho y alto del texto */
+        -webkit-transform: translate(-50%, -50%);
+           -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); /* Centra el texto en la capa */
+    }
+
+    #pageHeaderName {
+        color: white;
+        font-size: 5vw;
+        font-family: 'Brandon bold';
+        text-align: center;
+    }
+    
+    #subtitle {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 2vw;
+        text-align: right;
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .parallaxLayer_foreground {
+            background-position: center;
+        }
+        #pageHeaderName {
+            font-size: 36px;
+            text-align: right;
+        }
+        #subtitle {
+            font-size: 18px;
+        }
+    }
+}
