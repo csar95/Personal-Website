@@ -1,1 +1,1 @@
-const app=angular.module("Fishermen_Project",["hc.marked"]);
+const app=angular.module("Personal_Website",["hc.marked"]);
