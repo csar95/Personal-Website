@@ -110,7 +110,8 @@
 
 /* Handling slide-in */
 .come-in {
-  animation: come-in 1s ease forwards;
+  -ms-animation: come-in 1s ease forwards;
+      animation: come-in 1s ease forwards;
 }
 @keyframes come-in {
   from { -webkit-transform: translateY(40px);

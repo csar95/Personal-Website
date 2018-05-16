@@ -68,7 +68,7 @@
                 slideshows.not(this).cycle('goto', opts.currSlide);
             });
 
-            $('#slideshow-2 .cycle-slide').click(function(){
+            $('#slideshow-2 .cycle-slide').click( function() {
                 var index = $('#slideshow-2').data('cycle.API').getSlideIndex(this);
                 slideshows.cycle('goto', index);
             });
@@ -79,7 +79,7 @@
 
             $(".parallax").animate({ scrollTop: 70 }, 1500),
 
-            $(".parallax").scroll(() => {
+            $(".parallax").scroll( function() {
 
                 var contentRows = $('.sectionContent');
 
@@ -95,16 +95,16 @@
             /* --------------------------------- SLIDE-UP ANIMATION --------------------------------- */
             $( '.cycle-prev span, .cycle-next span' ).hover( 
                 // handlerIn
-                () => { $('#slideshow-2').mouseenter() },
+                function () { $('#slideshow-2').mouseenter() },
                 // handlerOut
-                () => { $('#slideshow-2').mouseleave() }
+                function () { $('#slideshow-2').mouseleave() }
             ),
 
-            $('#slideshow-2').on( 'mouseenter', () => { 
+            $('#slideshow-2').on( 'mouseenter', function() { 
                 $("#slideshow-2").css({'opacity': '1', 'transform': 'translateY(0)', 'padding-top': '20px'}) 
             }),
 
-            $('#slideshow-2').on( 'mouseleave', () => { 
+            $('#slideshow-2').on( 'mouseleave', function () { 
                 $("#slideshow-2").css({'opacity': '0', 'transform': 'translateY(120px)', 'padding-top': '120px'}) 
             })
         
