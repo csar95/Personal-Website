@@ -17,7 +17,7 @@
 
         <div class="parallaxLayer parallaxLayer_foreground" style="position: relative; height: auto;">
 
-            <section id="section1" class="section">
+            <section id="section1" class="section" style="background-color: #ffffff">
                 <div class="container">
                     <div class="row sectionTitle">
                         <div class="slidingContent col-md-6 offset-md-3">
@@ -28,7 +28,7 @@
                     {{#each content.fields.sections.0.fields.contentRows}}
                     <div class="row sectionContent">
                         <div class="slidingContent col-lg-4 offset-lg-1 col-md-5 col-sm-11 col-11">
-                            <img class="contentImg" src={{this.fields.image.fields.file.url}} style="width: 100%; height: auto; background-color: #f8f8f8">
+                            <img class="contentImg" src={{this.fields.image.fields.file.url}} style="width: 100%; height: auto; background-color: #eeeeee">
                         </div>
                         <div class="slidingContent col-lg-6 col-md-7 col-sm-11 col-11">
                             <h5 class="company">{{this.fields.title}}</h5>
@@ -42,7 +42,7 @@
                 </div>
             </section>
 
-            <section id="section2" class="section" style="background-color: #ffffff">
+            <section id="section2" class="section">
                 <div class="container">
                     <div class="row sectionTitle">
                         <div class="slidingContent col-md-6 offset-md-3">
@@ -67,11 +67,76 @@
                 </div>
             </section>
 
-            <section id="section3" class="section">
+            <section id="section3" class="section" style="background-color: #ffffff">
                 <div class="container">
                     <div class="row sectionTitle">
                         <div class="slidingContent col-md-6 offset-md-3">
                             <h1 id="sectionName">{{content.fields.sections.2.fields.sectionName}}</h1>
+                        </div>
+                    </div>
+
+                    <div class="row sectionContent">
+                        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-10 col-10">
+
+                            <div class="label">JAVA</div>
+                            <div class="progressBar">
+                                <div id="fillJava" class="progreso">
+                                    <div class="glow"></div>
+                                </div>
+                            </div>
+
+                            <div class="label">PYTHON</div>
+                            <div class="progressBar">
+                                <div id="fillPython" class="progreso">
+                                    <div class="glow"></div>
+                                </div>
+                            </div>
+
+                            <div class="label">HTML</div>
+                            <div class="progressBar">
+                                <div id="fillHTML" class="progreso">
+                                    <div class="glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="label">CSS</div>
+                            <div class="progressBar">
+                                <div id="fillCSS" class="progreso">
+                                    <div class="glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="label">SQL - PL/SQL</div>
+                            <div class="progressBar">
+                                <div id="fillSQL" class="progreso">
+                                    <div class="glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="label">NODE JS</div>
+                            <div class="progressBar">
+                                <div id="fillNode" class="progreso">
+                                    <div class="glow"></div>
+                                </div>
+                            </div>
+
+                            <div class="label">SWIFT</div>
+                            <div class="progressBar" style="margin-bottom: 0 !important;">
+                                <div id="fillSwift" class="progreso">
+                                    <div class="glow"></div>
+                                </div>
+                            </div>
+
+                        </div>                        
+                    </div>
+                </div>
+            </section>
+
+            <section id="section4" class="section">
+                <div class="container">
+                    <div class="row sectionTitle">
+                        <div class="slidingContent col-md-6 offset-md-3">
+                            <h1 id="sectionName">{{content.fields.sections.3.fields.sectionName}}</h1>
                         </div>
                     </div>
                 </div>
@@ -96,14 +161,14 @@
                             data-cycle-prev="> #slideshow-1 .cycle-prev"
                             data-cycle-next="> #slideshow-1 .cycle-next">
 
-                            <a id="firstImage" class='thumb' href='#'><img src={{content.fields.sections.2.fields.contentRows.0.fields.gallery.0.fields.file.url}}></a>
-                            <a class='thumb' href='#'><img src={{content.fields.sections.2.fields.contentRows.0.fields.gallery.1.fields.file.url}}></a>
-                            <a class='thumb' href='#'><img src={{content.fields.sections.2.fields.contentRows.0.fields.gallery.2.fields.file.url}}></a>
-                            <a class='thumb' href='#'><img src={{content.fields.sections.2.fields.contentRows.0.fields.gallery.3.fields.file.url}}></a>
-                            <a id="lastImage" class='thumb' href='#'><img src={{content.fields.sections.2.fields.contentRows.0.fields.gallery.4.fields.file.url}}></a>
+                            <a id="firstImage" class='thumb' href='#'><img src={{content.fields.sections.3.fields.contentRows.0.fields.gallery.0.fields.file.url}}></a>
+                            <a class='thumb' href='#'><img src={{content.fields.sections.3.fields.contentRows.0.fields.gallery.1.fields.file.url}}></a>
+                            <a class='thumb' href='#'><img src={{content.fields.sections.3.fields.contentRows.0.fields.gallery.2.fields.file.url}}></a>
+                            <a class='thumb' href='#'><img src={{content.fields.sections.3.fields.contentRows.0.fields.gallery.3.fields.file.url}}></a>
+                            <a id="lastImage" class='thumb' href='#'><img src={{content.fields.sections.3.fields.contentRows.0.fields.gallery.4.fields.file.url}}></a>
                         </div>
 
-                        {{#each content.fields.sections.2.fields.contentRows.0.fields.gallery}}
+                        {{#each content.fields.sections.3.fields.contentRows.0.fields.gallery}}
                             <img class="sliderImg" src={{this.fields.file.url}}>
                         {{/each}}
                     </div>
