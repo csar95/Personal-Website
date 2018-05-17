@@ -20,17 +20,17 @@
             <section id="section1" class="section">
                 <div class="container">
                     <div class="row sectionTitle">
-                        <div class="col-md-6 offset-md-3">
+                        <div class="slidingContent col-md-6 offset-md-3">
                             <h1 id="sectionName">{{content.fields.sections.0.fields.sectionName}}</h1>
                         </div>
                     </div>
 
                     {{#each content.fields.sections.0.fields.contentRows}}
                     <div class="row sectionContent">
-                        <div class="col-lg-4 offset-lg-1 col-md-5 col-sm-11 col-11">
+                        <div class="slidingContent col-lg-4 offset-lg-1 col-md-5 col-sm-11 col-11">
                             <img class="contentImg" src={{this.fields.image.fields.file.url}} style="width: 100%; height: auto; background-color: #f8f8f8">
                         </div>
-                        <div class="col-lg-6 col-md-7 col-sm-11 col-11">
+                        <div class="slidingContent col-lg-6 col-md-7 col-sm-11 col-11">
                             <h5 class="company">{{this.fields.title}}</h5>
                             <h6 class="time">{{this.fields.subtitle}}</h6>
                             <p class="place">{{this.fields.place}}</p>
@@ -45,20 +45,20 @@
             <section id="section2" class="section" style="background-color: #ffffff">
                 <div class="container">
                     <div class="row sectionTitle">
-                        <div class="col-md-6 offset-md-3">
+                        <div class="slidingContent col-md-6 offset-md-3">
                             <h1 id="sectionName">{{content.fields.sections.1.fields.sectionName}}</h1>
                         </div>
                     </div>
 
                     {{#each content.fields.sections.1.fields.contentRows}}
                     <div class="row sectionContent">
-                        <div class="col-lg-6 offset-lg-1 col-md-7 col-sm-10 col-10">
+                        <div class="slidingContent col-lg-6 offset-lg-1 col-md-7 col-sm-10 col-10">
                             <h5 class="studies">{{this.fields.title}}</h5>
                             <h6 class="time">{{this.fields.subtitle}}</h6>
                             <p class="place">{{this.fields.place}}</p>
                             <p>{{this.fields.content}}</p>
                         </div>
-                        <div class="col-lg-4 col-md-5 col-sm-10 col-10">
+                        <div class="slidingContent col-lg-4 col-md-5 col-sm-10 col-10">
                             <img src={{this.fields.image.fields.file.url}} style="width: 100%; height: auto;">
                         </div>
                     </div>
@@ -70,13 +70,13 @@
             <section id="section3" class="section">
                 <div class="container">
                     <div class="row sectionTitle">
-                        <div class="col-md-6 offset-md-3">
+                        <div class="slidingContent col-md-6 offset-md-3">
                             <h1 id="sectionName">{{content.fields.sections.2.fields.sectionName}}</h1>
                         </div>
                     </div>
                 </div>
                 <!-- SLIDER -->
-                <div class="sectionContent">
+                <div class="slidingContent sectionContent">
                     <div id="slideshow-1" class="cycle-slideshow" 
                         data-cycle-timeout=0
                         data-cycle-center-horz=true
@@ -114,7 +114,7 @@
             <footer style="background-color: #ffffff">
                 <div class="container">
                     <div class="row">
-                        <div id="disclaimer" class="col-md-8 offset-md-2">
+                        <div id="disclaimer" class="slidingContent col-md-8 offset-md-2">
                             {{content.fields.footer.fields.disclaimer}}
                         </div>
                     </div>

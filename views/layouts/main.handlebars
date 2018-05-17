@@ -119,13 +119,13 @@
 
             $(".parallax").scroll( function() {
 
-                var contentRows = $('.sectionContent');
+                var content = $('.slidingContent');
 
-                $.each(contentRows, function (i, contentRow) {
+                $.each(content, function (i, content) {
 
-                if ($(contentRow).visible(true)) {
-                    $(contentRow).addClass("come-in");
-                }
+                    if ($(content).visible(true)) {
+                        $(content).addClass("come-in");
+                    }
 
                 });
             }),
