@@ -119,16 +119,20 @@
             $(".parallax").animate({ scrollTop: 70 }, 1500),
 
             $(".parallax").scroll( function() {
+                
+                if ( $(window).width() > 768 ) {
 
-                var content = $('.slidingContent');
+                    var content = $('.slidingContent');
 
-                $.each(content, function (i, content) {
+                    $.each(content, function (i, content) {
 
-                    if ($(content).visible(true)) {
-                        $(content).addClass("come-in");
-                    }
+                        if ($(content).visible(true)) {
+                            $(content).addClass("come-in");
+                        }
 
-                });
+                    });
+
+                }
 
                 if ($('#fillJava').visible(true)) {
                     $('#fillJava').addClass("fill-Java");
@@ -150,7 +154,8 @@
                 }
                 if ($('#fillSwift').visible(true)) {
                     $('#fillSwift').addClass("fill-Swift");
-                }
+                }                
+
             }),
             
             /* --------------------------------- SLIDE-UP ANIMATION --------------------------------- */
