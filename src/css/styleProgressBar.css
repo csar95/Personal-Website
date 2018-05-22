@@ -79,6 +79,15 @@
   from { width: 0%; }
   to { width: 70%; }
 }
+.fill-JavaScript {
+  animation: fill-JavaScript 2s ease-out 0.5s; /* Duracion: 2s | Delay: 0.5s*/
+  animation-fill-mode: forwards;    
+  width: 0%;
+}
+@keyframes fill-JavaScript {
+  from { width: 0%; }
+  to { width: 60%; }
+}
 .fill-SQL {
   animation: fill-SQL 2s ease-out 0.5s; /* Duracion: 2s | Delay: 0.5s*/
   animation-fill-mode: forwards;    

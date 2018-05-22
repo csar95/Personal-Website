@@ -56,7 +56,7 @@
                             <h5 class="studies">{{this.fields.title}}</h5>
                             <h6 class="time">{{this.fields.subtitle}}</h6>
                             <p class="place">{{this.fields.place}}</p>
-                            <p>{{this.fields.content}}</p>
+                            <p><marked>{{this.fields.content}}</marked></p>
                         </div>
                         <div class="slidingContent col-lg-4 col-md-5 col-sm-10 col-10">
                             <img src={{this.fields.image.fields.file.url}} style="width: 100%; height: auto;">
@@ -96,6 +96,11 @@
                             <div class="label">CSS</div>
                             <div class="progressBar">
                                 <div id="fillCSS" class="progreso"></div>
+                            </div>
+
+                            <div class="label">JavaScript</div>
+                            <div class="progressBar">
+                                <div id="fillJavaScript" class="progreso"></div>
                             </div>
                             
                             <div class="label">SQL - PL/SQL</div>
