@@ -174,19 +174,20 @@
 
             $('#slideshow-2').on( 'mouseleave', function () { 
                 $("#slideshow-2").css({'opacity': '0', 'transform': 'translateY(120px)', 'padding-top': '120px'}) 
-            })/* ,
+            }),
 
             $('#tags a').click( function (event) {
                 event.preventDefault();
                 
                 var scroll = $($.attr(this, 'href')).offset().top;
-
-                $('html, body').animate({
-                    scrollTop: scroll
+                var coverTop = $('#cover').offset().top;
+                
+                $('.parallax').animate({
+                    scrollTop: scroll - coverTop
                 }, 1000);
 
                 return false;
-            }) */
+            })
         
         );
 
