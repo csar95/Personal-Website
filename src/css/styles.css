@@ -129,12 +129,12 @@
   transform: translateY(0);
   animation: none;
 } */
-#section2 a {
+#estudios a {
   text-decoration: none;
   color: inherit;
   font-weight: bold;
 }
-#section2 a:hover {
+#estudios a:hover {
   color: #666666;
 }
 
