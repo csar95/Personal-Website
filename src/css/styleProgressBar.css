@@ -50,7 +50,7 @@
 }
 @keyframes fill-Java {
   from { width: 0%; }
-  to { width: 70%; }
+  to { width: 60%; }
 }
 .fill-Python {
   animation: fill-Python 2s ease-out 0.5s; /* Duracion: 2s | Delay: 0.5s*/
@@ -59,7 +59,7 @@
 }
 @keyframes fill-Python {
   from { width: 0%; }
-  to { width: 60%; }
+  to { width: 50%; }
 }
 .fill-HTML {
   animation: fill-HTML 2s ease-out 0.5s; /* Duracion: 2s | Delay: 0.5s*/
@@ -113,5 +113,5 @@
 }
 @keyframes fill-Swift {
   from { width: 0%; }
-  to { width: 50%; }
+  to { width: 20%; }
 }
